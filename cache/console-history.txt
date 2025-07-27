@@ -1,0 +1,8 @@
+await owner.sendTransaction({to: contractAddress, value: ethers.utils.parseEther("10")});
+const contractAddress = "YOUR_CONTRACT_ADDRESS_FROM_DEPLOYMENT";
+const [owner] = await ethers.getSigners();
+npm run dev
+npm rundev
+await owner.sendTransaction({to: contract.address, value: ethers.utils.parseEther("10")});
+const contract = await ethers.getContractAt("HackathonRegistry", "CONTRACT_ADDRESS_HERE");
+const [owner] = await ethers.getSigners();

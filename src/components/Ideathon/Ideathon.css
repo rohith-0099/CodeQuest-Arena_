@@ -1,0 +1,1272 @@
+/* Ideathon Arena Styles */
+
+.ideathon-arena {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 50%, #1e1b4b 100%);
+  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.ideathon-header {
+  background: rgba(30, 27, 75, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid rgba(236, 72, 153, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.back-btn {
+  background: rgba(236, 72, 153, 0.2);
+  color: white;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+.back-btn:hover {
+  background: rgba(236, 72, 153, 0.3);
+  transform: translateX(-2px);
+}
+
+.title-section h1 {
+  margin: 0 0 5px 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #ec4899, #be185d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title-section p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(236, 72, 153, 0.2);
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+.stat-icon {
+  font-size: 18px;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ec4899;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.user-avatar img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 3px solid #ec4899;
+}
+
+/* Main Content */
+.ideathon-content {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Main View */
+.ideathon-main {
+  text-align: center;
+  animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-header {
+  margin-bottom: 60px;
+}
+
+.main-header h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #ec4899, #be185d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.main-header p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.action-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.action-card {
+  background: rgba(30, 27, 75, 0.8);
+  backdrop-filter: blur(20px);
+  border: 3px solid rgba(236, 72, 153, 0.3);
+  border-radius: 25px;
+  padding: 40px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.action-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+  border-color: #ec4899;
+}
+
+.card-icon {
+  font-size: 4rem;
+  margin-bottom: 25px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.action-card h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #ec4899;
+}
+
+.action-card p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.card-features span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  padding: 5px 0;
+}
+
+/* Submit View */
+.submit-idea {
+  animation: slideInUp 0.6s ease;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.submit-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.submit-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ec4899;
+  margin: 0;
+}
+
+.ideathon-info {
+  background: rgba(30, 27, 75, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(236, 72, 153, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  margin-left: auto;
+  text-align: center;
+}
+
+.ideathon-info h3 {
+  margin: 0 0 10px 0;
+  color: #ec4899;
+  font-size: 1.2rem;
+}
+
+.ideathon-info p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.submit-form {
+  background: rgba(30, 27, 75, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(236, 72, 153, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.form-section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.form-section h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ec4899;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 12px 16px;
+  border: 2px solid rgba(236, 72, 153, 0.2);
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.8);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* File Upload Section */
+.file-upload-section {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.upload-info {
+  margin-bottom: 25px;
+}
+
+.upload-info p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.upload-info ul {
+  color: rgba(255, 255, 255, 0.7);
+  padding-left: 20px;
+}
+
+.upload-info li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.file-upload-area {
+  position: relative;
+  border: 2px dashed rgba(236, 72, 153, 0.4);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.file-upload-area:hover {
+  border-color: #ec4899;
+  background: rgba(236, 72, 153, 0.05);
+}
+
+.file-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.upload-icon {
+  font-size: 3rem;
+  color: #ec4899;
+}
+
+.upload-text strong {
+  color: #ec4899;
+  font-size: 1.1rem;
+}
+
+.upload-text p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 5px 0;
+}
+
+.upload-text small {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+}
+
+.upload-progress {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ec4899, #be185d);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.uploaded-files {
+  margin-top: 25px;
+}
+
+.uploaded-files h5 {
+  color: #ec4899;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.uploaded-file {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(236, 72, 153, 0.1);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.file-icon {
+  font-size: 20px;
+  color: #ec4899;
+}
+
+.file-name {
+  flex: 1;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.remove-file-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.remove-file-btn:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.cancel-btn,
+.submit-btn {
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.cancel-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.submit-btn {
+  background: linear-gradient(45deg, #ec4899, #be185d);
+  color: white;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Stats Section */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: rgba(30, 27, 75, 0.6);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(236, 72, 153, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(236, 72, 153, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ec4899;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Join View Styles */
+.join-ideathon {
+  animation: slideInLeft 0.6s ease;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.join-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.join-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ec4899;
+  margin: 0;
+}
+
+.ideathons-list h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 60px;
+}
+
+.ideathons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.ideathon-card {
+  background: rgba(30, 27, 75, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(236, 72, 153, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ideathon-card:hover {
+  transform: translateY(-5px);
+  border-color: #ec4899;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.ideathon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ideathon-header h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.theme-badge {
+  background: linear-gradient(45deg, #ec4899, #be185d);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ideathon-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.ideathon-meta {
+  margin-bottom: 25px;
+}
+
+.meta-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.meta-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.meta-value {
+  color: white;
+  font-weight: 600;
+}
+
+.prizes-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.prize {
+  background: rgba(236, 72, 153, 0.2);
+  color: #ec4899;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.no-ideathons {
+  text-align: center;
+  padding: 80px 40px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+}
+
+.registration-form {
+  background: rgba(30, 27, 75, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(236, 72, 153, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.selected-ideathon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.selected-ideathon h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ec4899;
+  margin: 0;
+}
+
+.change-ideathon-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.change-ideathon-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .action-cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .ideathon-content {
+    padding: 20px 15px;
+  }
+  
+  .main-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .ideathons-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .submit-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .ideathon-info {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .main-header h2 {
+    font-size: 2rem;
+  }
+  
+  .action-card {
+    padding: 25px;
+  }
+  
+  .submit-form,
+  .registration-form {
+    padding: 25px;
+  }
+  
+  .file-upload-area {
+    padding: 25px;
+  }
+}
+
+/* Focus and Accessibility */
+.action-card:focus,
+.ideathon-card:focus,
+.submit-btn:focus,
+.cancel-btn:focus,
+.file-upload-label:focus {
+  outline: 2px solid #ec4899;
+  outline-offset: 2px;
+}
+/* Host View Styles */
+.host-ideathon {
+  animation: slideInRight 0.6s ease;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.host-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.host-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ec4899;
+  margin: 0;
+}
+
+.host-form {
+  background: rgba(30, 27, 75, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(236, 72, 153, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.prize-group {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.prize-group h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Manage View Styles */
+.manage-ideathon {
+  animation: fadeIn 0.6s ease;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.manage-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.manage-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ec4899;
+  margin: 0;
+}
+
+.ideathon-overview {
+  background: rgba(30, 27, 75, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(236, 72, 153, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.ideathon-overview h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.overview-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.overview-stats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overview-stats .stat-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ec4899;
+  margin-bottom: 5px;
+}
+
+.overview-stats .stat-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.management-sections {
+  display: grid;
+  gap: 40px;
+}
+
+.participants-section h4,
+.submissions-section h4,
+.winners-section h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ec4899;
+  margin-bottom: 25px;
+}
+
+.participants-list,
+.submissions-list {
+  display: grid;
+  gap: 25px;
+}
+
+.participant-card,
+.submission-card {
+  background: rgba(30, 27, 75, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(236, 72, 153, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.participant-info h5,
+.submission-info h5 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ec4899;
+  margin-bottom: 15px;
+}
+
+.participant-info p,
+.submission-info p {
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.participant-details,
+.submission-details {
+  margin: 20px 0;
+}
+
+.detail-section {
+  margin-bottom: 15px;
+}
+
+.detail-section strong {
+  color: #ec4899;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.detail-text {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0 !important;
+}
+
+.submission-description {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.submission-documents {
+  margin: 20px 0;
+}
+
+.documents-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.document-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #ec4899;
+  text-decoration: none;
+  padding: 8px 12px;
+  background: rgba(236, 72, 153, 0.2);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.document-link:hover {
+  background: rgba(236, 72, 153, 0.3);
+  transform: translateY(-2px);
+}
+
+.registration-date,
+.submission-date {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.registration-date small,
+.submission-date small {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+
+.winner-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.winner-selection h6 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.winner-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.winner-btn {
+  padding: 12px 20px;
+  border: 2px solid;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.winner-btn.first {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: #ffd700;
+  color: #ffd700;
+}
+
+.winner-btn.first:hover:not(:disabled) {
+  background: rgba(255, 215, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.winner-btn.second {
+  background: rgba(192, 192, 192, 0.2);
+  border-color: #c0c0c0;
+  color: #c0c0c0;
+}
+
+.winner-btn.second:hover:not(:disabled) {
+  background: rgba(192, 192, 192, 0.3);
+  transform: translateY(-2px);
+}
+
+.winner-btn.third {
+  background: rgba(205, 127, 50, 0.2);
+  border-color: #cd7f32;
+  color: #cd7f32;
+}
+
+.winner-btn.third:hover:not(:disabled) {
+  background: rgba(205, 127, 50, 0.3);
+  transform: translateY(-2px);
+}
+
+.winner-btn.selected {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.winner-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.no-participants,
+.no-submissions {
+  text-align: center;
+  padding: 60px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+}
+
+.winners-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.winner-card {
+  background: rgba(30, 27, 75, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+}
+
+.winner-card.first {
+  border-color: #ffd700;
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.winner-card.second {
+  border-color: #c0c0c0;
+  background: rgba(192, 192, 192, 0.1);
+}
+
+.winner-card.third {
+  border-color: #cd7f32;
+  background: rgba(205, 127, 50, 0.1);
+}
+
+.winner-position {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.winner-card.first .winner-position {
+  color: #ffd700;
+}
+
+.winner-card.second .winner-position {
+  color: #c0c0c0;
+}
+
+.winner-card.third .winner-position {
+  color: #cd7f32;
+}
+
+.winner-details h5 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.winner-details p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+}
+
+.winner-idea {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+}
+
+.no-winner {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+/* Responsive Design Updates */
+@media (max-width: 1024px) {
+  .participant-card,
+  .submission-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .overview-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .winners-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .participant-card,
+  .submission-card {
+    padding: 20px;
+  }
+  
+  .winner-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .documents-list {
+    flex-direction: column;
+  }
+}

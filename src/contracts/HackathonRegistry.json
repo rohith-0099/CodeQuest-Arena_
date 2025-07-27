@@ -1,0 +1,672 @@
+{
+  "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+  "abi": [
+    {
+      "type": "constructor",
+      "payable": false,
+      "inputs": []
+    },
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "AuraCoinAwarded",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "user",
+          "indexed": true
+        },
+        {
+          "type": "uint256",
+          "name": "auraAmount",
+          "indexed": false
+        },
+        {
+          "type": "string",
+          "name": "hackathonName",
+          "indexed": false
+        },
+        {
+          "type": "string",
+          "name": "reason",
+          "indexed": false
+        },
+        {
+          "type": "address",
+          "name": "awardedBy",
+          "indexed": false
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "AuraCoinRedeemed",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "user",
+          "indexed": true
+        },
+        {
+          "type": "uint256",
+          "name": "auraAmount",
+          "indexed": false
+        },
+        {
+          "type": "uint256",
+          "name": "ethAmount",
+          "indexed": false
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "HackathonHostAdded",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "host",
+          "indexed": true
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "ParticipantRegistered",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "participant",
+          "indexed": true
+        },
+        {
+          "type": "string",
+          "name": "name",
+          "indexed": false
+        },
+        {
+          "type": "string",
+          "name": "teamName",
+          "indexed": false
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "AURA_TO_ETH_RATE",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "addHackathonHost",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_host"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "allAuraTransactions",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "address",
+          "name": "user"
+        },
+        {
+          "type": "uint256",
+          "name": "auraAmount"
+        },
+        {
+          "type": "uint256",
+          "name": "ethAmount"
+        },
+        {
+          "type": "string",
+          "name": "transactionType"
+        },
+        {
+          "type": "string",
+          "name": "hackathonName"
+        },
+        {
+          "type": "string",
+          "name": "reason"
+        },
+        {
+          "type": "uint256",
+          "name": "timestamp"
+        },
+        {
+          "type": "bytes32",
+          "name": "txHash"
+        },
+        {
+          "type": "address",
+          "name": "awardedBy"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "auraCoinBalances",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "balance"
+        },
+        {
+          "type": "uint256",
+          "name": "totalEarned"
+        },
+        {
+          "type": "uint256",
+          "name": "totalRedeemed"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "awardAuraCoin",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_participant"
+        },
+        {
+          "type": "uint256",
+          "name": "_auraAmount"
+        },
+        {
+          "type": "string",
+          "name": "_hackathonName"
+        },
+        {
+          "type": "string",
+          "name": "_reason"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "fundContract",
+      "constant": false,
+      "stateMutability": "payable",
+      "payable": true,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "getAllAuraTransactions",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "tuple[]",
+          "components": [
+            {
+              "type": "address",
+              "name": "user"
+            },
+            {
+              "type": "uint256",
+              "name": "auraAmount"
+            },
+            {
+              "type": "uint256",
+              "name": "ethAmount"
+            },
+            {
+              "type": "string",
+              "name": "transactionType"
+            },
+            {
+              "type": "string",
+              "name": "hackathonName"
+            },
+            {
+              "type": "string",
+              "name": "reason"
+            },
+            {
+              "type": "uint256",
+              "name": "timestamp"
+            },
+            {
+              "type": "bytes32",
+              "name": "txHash"
+            },
+            {
+              "type": "address",
+              "name": "awardedBy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "getAuraCoinBalance",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_user"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "balance"
+        },
+        {
+          "type": "uint256",
+          "name": "totalEarned"
+        },
+        {
+          "type": "uint256",
+          "name": "totalRedeemed"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "getAuraRedemptionHistory",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_user"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "tuple[]",
+          "components": [
+            {
+              "type": "address",
+              "name": "user"
+            },
+            {
+              "type": "uint256",
+              "name": "auraAmount"
+            },
+            {
+              "type": "uint256",
+              "name": "ethAmount"
+            },
+            {
+              "type": "string",
+              "name": "transactionType"
+            },
+            {
+              "type": "string",
+              "name": "hackathonName"
+            },
+            {
+              "type": "string",
+              "name": "reason"
+            },
+            {
+              "type": "uint256",
+              "name": "timestamp"
+            },
+            {
+              "type": "bytes32",
+              "name": "txHash"
+            },
+            {
+              "type": "address",
+              "name": "awardedBy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "getAuraStats",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "totalInCirculation"
+        },
+        {
+          "type": "uint256",
+          "name": "totalEthRedeemed_"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "getAuraToEthRate",
+      "constant": true,
+      "stateMutability": "pure",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "getParticipant",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_addr"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "tuple",
+          "components": [
+            {
+              "type": "address",
+              "name": "walletAddress"
+            },
+            {
+              "type": "string",
+              "name": "name"
+            },
+            {
+              "type": "string",
+              "name": "teamName"
+            },
+            {
+              "type": "string",
+              "name": "projectTitle"
+            },
+            {
+              "type": "bool",
+              "name": "isRegistered"
+            },
+            {
+              "type": "uint256",
+              "name": "registrationTime"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "getParticipantCount",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "hackathonHosts",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "isHackathonHost",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_address"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "owner",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "address"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "participantAddresses",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "address"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "participants",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "address",
+          "name": "walletAddress"
+        },
+        {
+          "type": "string",
+          "name": "name"
+        },
+        {
+          "type": "string",
+          "name": "teamName"
+        },
+        {
+          "type": "string",
+          "name": "projectTitle"
+        },
+        {
+          "type": "bool",
+          "name": "isRegistered"
+        },
+        {
+          "type": "uint256",
+          "name": "registrationTime"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "redeemAuraForETH",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "_auraAmount"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "registerParticipant",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "string",
+          "name": "_name"
+        },
+        {
+          "type": "string",
+          "name": "_teamName"
+        },
+        {
+          "type": "string",
+          "name": "_projectTitle"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "totalAuraInCirculation",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "totalEthRedeemed",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "userAuraHistory",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address"
+        },
+        {
+          "type": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "address",
+          "name": "user"
+        },
+        {
+          "type": "uint256",
+          "name": "auraAmount"
+        },
+        {
+          "type": "uint256",
+          "name": "ethAmount"
+        },
+        {
+          "type": "string",
+          "name": "transactionType"
+        },
+        {
+          "type": "string",
+          "name": "hackathonName"
+        },
+        {
+          "type": "string",
+          "name": "reason"
+        },
+        {
+          "type": "uint256",
+          "name": "timestamp"
+        },
+        {
+          "type": "bytes32",
+          "name": "txHash"
+        },
+        {
+          "type": "address",
+          "name": "awardedBy"
+        }
+      ]
+    }
+  ]
+}
