@@ -15,7 +15,7 @@ const CodeNinja = () => {
   const [loading, setLoading] = useState(false);
   const [userPoints, setUserPoints] = useState(0);
   const [showSuccess, setShowSuccess] = useState(false);
-
+//different languages
   const languages = [
     { id: 'javascript', name: 'JavaScript', icon: '🟨' },
     { id: 'python', name: 'Python', icon: '🐍' },
