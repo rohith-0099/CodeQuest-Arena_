@@ -23,7 +23,7 @@ const CodeNinja = () => {
     { id: 'cpp', name: 'C++', icon: '⚡' },
     { id: 'c', name: 'C', icon: '🔧' }
   ];
-
+//Coding Quests
   const codingProblems = [
     {
       id: 1,
