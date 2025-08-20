@@ -95,15 +95,6 @@ npm start
 
 ---
 
-## ⚔️ Challenges We Solved  
-
-- 🔥 **Firebase** – Fixed import/export issues, configured Firestore & Auth  
-- ⚛️ **React State** – Managed async updates, complex state sharing  
-- 🎨 **UI/UX** – Fixed crashes, improved responsiveness  
-- ⛓ **Web3 Integration** – Wallet connection, transaction errors, gas fee optimization  
-
----
-
 ## 🚀 Roadmap  
 - ✅ AURA reward mechanism  
 - ✅ Smart contract reward distribution  
